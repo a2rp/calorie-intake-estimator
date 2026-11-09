@@ -2,7 +2,7 @@
 
 # Fuelwise: Calorie Intake Estimator
 
-Fuelwise estimates a daily energy range from age, height, weight, activity, and a chosen goal. Use it as a starting point for learning about personal energy needs, not as a medical or nutrition prescription.
+Fuelwise estimates resting energy, maintenance energy, and one goal-adjusted daily target from age, height, weight, activity, and the equation setting. Use it as a starting point for learning about personal energy needs, not as a medical or nutrition prescription.
 
 **Project repository:** https://github.com/a2rp/calorie-intake-estimator
 **Deployed site:** https://a2rp.github.io/calorie-intake-estimator/
@@ -21,9 +21,15 @@ Change the measurements and selections in the form. The result updates as you ma
 
 ## Calculation and data
 
-Fuelwise uses the Mifflin-St Jeor resting-energy equation and multiplies it by a standard activity factor to estimate maintenance energy. The goal selection applies a fixed planning adjustment to that estimate. It does not collect or save personal measurements. The calculation is an approximation and does not account for medical conditions, pregnancy, age under 18, or individual nutrition needs.
+Resting energy uses the Mifflin-St Jeor equation. The original study derived it from 498 healthy adults aged 19–78 ([Mifflin et al., 1990](https://pubmed.ncbi.nlm.nih.gov/2305711/)). The app multiplies that estimate by a selected activity factor, then applies a fixed planning adjustment of −300 kcal for Reduce or +250 kcal for Gain. Maintain applies no adjustment.
+
+The example macro split targets up to 1.6 g of protein per kilogram and 28% of the energy target from fat, then assigns the remaining target to carbohydrates. The amounts are capped so their energy does not exceed the displayed target. These are illustrative calculations, not individualized nutrition recommendations.
+
+The app does not collect or save profile measurements. The equation is a population estimate and may not reflect an individual's needs. This tool is for general education only and does not provide medical advice, diagnosis, or a prescribed diet. It is not intended for people outside the study's adult age range, during pregnancy, or for people with medical conditions; seek qualified professional guidance for individual needs.
 
 ## Run and check locally
+
+Requires Node.js 20.19 or later.
 
 Install dependencies with `npm install`, then start Vite with `npm run dev`. Run `npm run lint` for ESLint and `npm run build` for the production build. Run `npm run deploy` to build and publish `dist` to the `gh-pages` branch.
 

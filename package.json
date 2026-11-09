@@ -4,6 +4,25 @@
   "version": "1.0.0",
   "type": "module",
   "homepage": "https://a2rp.github.io/calorie-intake-estimator",
+  "description": "A client-side educational estimate of resting energy, maintenance calories, and goal-adjusted intake.",
+  "author": "Ashish Ranjan",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "keywords": [
+    "calorie-estimator",
+    "energy-expenditure",
+    "mifflin-st-jeor",
+    "resting-energy",
+    "calorie-calculator",
+    "macro-calculator",
+    "health-calculator",
+    "nutrition-education",
+    "react",
+    "vite",
+    "javascript",
+    "github-pages"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
