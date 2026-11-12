@@ -17,11 +17,11 @@ Fuelwise estimates resting energy, maintenance energy, and one goal-adjusted dai
 
 ## How to use it
 
-Change the measurements and selections in the form. The result updates as you make changes. Switch between maintain, reduce, and gain to compare target estimates. The macro amounts are planning examples derived from the entered weight and estimated energy target.
+The profile starts blank. Enter age, weight, and height, then choose an equation setting and typical activity level to display an estimate. The result updates as you make changes. Switch between maintain, reduce, and gain to compare estimates. The macro amounts are illustrative examples derived from the entered weight and estimated energy target; they are hidden when the calculated target is 800 kcal/day or lower.
 
 ## Calculation and data
 
-Resting energy uses the Mifflin-St Jeor equation. The original study derived it from 498 healthy adults aged 19–78 ([Mifflin et al., 1990](https://pubmed.ncbi.nlm.nih.gov/2305711/)). The app multiplies that estimate by a selected activity factor, then applies a fixed planning adjustment of −300 kcal for Reduce or +250 kcal for Gain. Maintain applies no adjustment.
+Resting energy uses the Mifflin-St Jeor equation. The original study derived it from 498 healthy adults aged 19–78 ([Mifflin et al., 1990, doi:10.1093/ajcn/51.2.241](https://pubmed.ncbi.nlm.nih.gov/2305711/)). The app multiplies that estimate by a selected activity factor, then applies a fixed planning adjustment of −300 kcal for Reduce or +250 kcal for Gain. Maintain applies no adjustment. When a calculated result is 800 kcal/day or lower, the app displays a warning and links to [NIDDK guidance](https://www.niddk.nih.gov/-/media/Files/Weight-Management/Choosingprogram0208.pdf) on close medical supervision for some very-low-calorie plans.
 
 The example macro split targets up to 1.6 g of protein per kilogram and 28% of the energy target from fat, then assigns the remaining target to carbohydrates. The amounts are capped so their energy does not exceed the displayed target. These are illustrative calculations, not individualized nutrition recommendations.
 
@@ -29,7 +29,7 @@ The app does not collect or save profile measurements. The equation is a populat
 
 ## Run and check locally
 
-Requires Node.js 20.19 or later.
+Requires Node.js 20.19.x or 22.12 or later, matching Vite's supported versions.
 
 Install dependencies with `npm install`, then start Vite with `npm run dev`. Run `npm run lint` for ESLint and `npm run build` for the production build. Run `npm run deploy` to build and publish `dist` to the `gh-pages` branch.
 
